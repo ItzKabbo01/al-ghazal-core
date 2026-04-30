@@ -23,7 +23,7 @@ if prompt := st.chat_input("Command Al-Ghazal..."):
     with st.chat_message("assistant"):
         # This part makes the AI actually think and respond
         stream = client.chat.completions.create(
-            model="gpt-3.5-turbo",
+            model="gpt-4o-mini",
             messages=[{"role": m["role"], "content": m["content"]} for m in st.session_state.messages],
             stream=True,
         )
